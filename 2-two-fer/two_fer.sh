@@ -2,12 +2,10 @@
 
 main () {
   name="$1"
-  if [ -z "${name}" ] ; then
+  if (( $# == 0 )); then
     name='you'
   fi
   echo "One for $name, one for me."
 }
 
-main "$1"
-
-
+main "$@"
